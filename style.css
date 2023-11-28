@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+:root {
+  --index: calc(1vh + 1vw);
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(113, 113, 113);
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: calc(var(--index) * 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header label {
+  font-size: 40px;
+}
+.header input {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center;
+  outline: none;
+}
+.header .btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 30px;
+  color: rgb(39, 38, 38);
+}
+
+.main {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(81, 84, 87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.main__container {
+  width: calc(var(--index) * 45);
+  height: calc(var(--index) * 20);
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.break {
+  width: 4px;
+  height: 160px;
+  background-color: rgb(115, 115, 115);
+}
+.clock_minutes {
+  width: calc(var(--index) * 18);
+  height: calc(var(--index) * 17);
+  font-size: calc(var(--index) * 15);
+  text-align: center;
+}
+.clock_seconds {
+  width: calc(var(--index) * 18);
+  height: calc(var(--index) * 17);
+  font-size: calc(var(--index) * 15);
+  text-align: center;
+}
+.main__container h1 {
+  letter-spacing: -10px;
+  text-shadow: 10px 8px 7px rgba(36, 33, 33, 0.8);
+}
+
+.stop {
+  position: relative;
+  left: -120px;
+  z-index: -1;
+}
+.comment {
+  font-weight: 100;
+  font-size: 30px;
+}
+.timer_name {
+  font-weight: 900;
+  font-size: 120px;
+  opacity: 0.3;
+}
+
+.hidden {
+  animation: breaker 3s infinite;
+}
+
+@keyframes breaker {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+}
+
+/*000000000000000000000000000000000000000000000000000000000000000000000*/
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(113, 113, 113);
+    padding-top: 10px;
+  }
+
+  .container {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    width: 100%;
+    height: calc(var(--index) * 18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .header label {
+    font-size: 50px;
+  }
+  .header input {
+    width: 200px;
+    height: 160px;
+    border-radius: 10px;
+    font-size: 36px;
+    text-align: center;
+    outline: none;
+  }
+  .header .btn {
+    width: 200px;
+    height: 160px;
+    border-radius: 10px;
+    font-size: 40px;
+    color: rgb(39, 38, 38);
+  }
+
+  .main {
+    width: 100%;
+    height: 60%;
+    background-color: rgb(81, 84, 87);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .main__container {
+    width: calc(var(--index) * 25);
+    height: calc(var(--index) * 45);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .clock_minutes {
+    width: calc(var(--index) * 25);
+    height: calc(var(--index) * 20);
+    font-size: calc(var(--index) * 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .clock_seconds {
+    width: calc(var(--index) * 25);
+    height: calc(var(--index) * 20);
+    font-size: calc(var(--index) * 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main__container h1 {
+    letter-spacing: -1px;
+    text-shadow: 0 0 20px rgba(6, 6, 6, 0.8);
+  }
+
+  .stop {
+    width: 200px;
+    height: 160px;
+    border-radius: 10px;
+    font-size: 40px;
+    color: rgb(39, 38, 38);
+    z-index: 1000;
+    position: relative;
+    left: 0px;
+  }
+  .comment {
+    font-weight: 100;
+    font-size: 30px;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+  }
+  .timer_name {
+    font-weight: 900;
+    font-size: 50px;
+    opacity: 0.3;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+  }
+
+  .break {
+    width: 200px;
+    height: 4px;
+    background-color: rgb(115, 115, 115);
+  }
+
+  .hidden {
+    animation: breaker 3s infinite;
+  }
+
+  @keyframes breaker {
+    0% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 0.9;
+    }
+    20% {
+      opacity: 0.7;
+    }
+    30% {
+      opacity: 0.5;
+    }
+    40% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    60% {
+      opacity: 0.4;
+    }
+    70% {
+      opacity: 0.5;
+    }
+    80% {
+      opacity: 0.7;
+    }
+    90% {
+      opacity: 0.9;
+    }
+  }
+}
